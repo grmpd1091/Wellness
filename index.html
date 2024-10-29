@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="playerInput">
+        <input type="text" id="playerName" placeholder="Enter player name" />
+        <input type="color" id="playerColor" />
+        <button id="addPlayerButton">Add Player</button>
+    </div>
+
+    <div id="playerDisplay"></div>
+
+    <button id="startButton" onclick="initializeGame()">Start Game</button>
+
+    <div id="gameSection" style="display: none;">
+        <div id="turnSection">
+            <div id="currentTurn"></div>
+            <button id="answerQuestionButton">Answer Question</button>
+        </div>
+        <div id="board"></div>
+    </div>
+
+    <!-- Custom Question Modal -->
+    <div id="questionModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div id="questionText"></div>
+            <div id="answerButtons"></div>
+            <div id="answerOverlay" class="overlay" style="display: none;"></div>
+        </div>
+    </div>
+    
+    <button id="resetButton" style="display: none;" onclick="resetGame()">Reset Game</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
